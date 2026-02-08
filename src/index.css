@@ -47,16 +47,28 @@
     --caramel: 25 60% 50%;
     --mocha: 15 35% 20%;
 
+    /* Diwali Theme Tokens */
+    --diwali-gold: 43 96% 56%;
+    --diwali-orange: 25 95% 55%;
+    --diwali-deep-red: 0 70% 40%;
+    --diwali-terracotta: 15 60% 45%;
+    --diwali-terracotta-light: 18 50% 55%;
+    --diwali-purple: 280 40% 50%;
+    --diwali-green: 140 50% 40%;
+
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(20 40% 25% / 0.9), hsl(15 35% 20% / 0.85));
     --gradient-warm: linear-gradient(135deg, hsl(35 40% 92%), hsl(10 60% 85% / 0.3));
     --gradient-card: linear-gradient(145deg, hsl(30 30% 95%), hsl(35 40% 92%));
     --gradient-accent: linear-gradient(135deg, hsl(25 60% 50%), hsl(10 55% 65%));
+    --gradient-diwali: linear-gradient(135deg, hsl(25 95% 55%), hsl(43 96% 56%), hsl(25 95% 55%));
+    --gradient-diwali-dark: linear-gradient(135deg, hsl(0 70% 30%), hsl(15 60% 25%), hsl(280 40% 25%));
 
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(20 40% 25% / 0.1);
     --shadow-medium: 0 8px 30px -6px hsl(20 40% 25% / 0.15);
     --shadow-glow: 0 0 40px -10px hsl(25 60% 50% / 0.3);
+    --shadow-diwali: 0 0 30px -5px hsl(43 96% 56% / 0.3);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -123,6 +135,25 @@
   .call-btn:hover {
     @apply -translate-y-0.5 opacity-90;
     box-shadow: var(--shadow-medium);
+  }
+
+  /* Diwali Banner */
+  .diwali-banner {
+    background: var(--gradient-diwali);
+    color: hsl(var(--warm-white));
+    box-shadow: 0 2px 15px hsl(43 96% 56% / 0.3);
+  }
+
+  /* Diwali festive border glow */
+  .diwali-glow {
+    box-shadow: var(--shadow-diwali);
+    border: 1px solid hsl(var(--diwali-gold) / 0.2);
+  }
+
+  /* Diwali section divider */
+  .diwali-divider {
+    @apply w-full h-px;
+    background: linear-gradient(90deg, transparent, hsl(var(--diwali-gold) / 0.4), hsl(var(--diwali-orange) / 0.4), hsl(var(--diwali-gold) / 0.4), transparent);
   }
 }
 
