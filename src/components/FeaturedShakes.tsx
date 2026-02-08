@@ -63,11 +63,22 @@ const FeaturedShakes = () => {
             Our Specials
           </span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-primary mt-3">
-            Best Sellers
+            🪔 Diwali Best Sellers 🪔
           </h2>
           <p className="text-muted-foreground font-body mt-3 max-w-md mx-auto">
-            Sabse zyada pasand kiye jaane wale shakes jo aapko zaroor try karne chahiye!
+            Is tyohaar, special shakes ke saath celebrate karo Diwali! 🎆✨
           </p>
+          {/* Diwali offer badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full font-body font-semibold text-sm diwali-glow"
+            style={{ background: "var(--gradient-diwali)", color: "hsl(var(--warm-white))" }}
+          >
+            <span>🎁</span> Diwali Special — Flat 20% OFF on All Shakes! <span>🎁</span>
+          </motion.div>
         </motion.div>
 
         <motion.div

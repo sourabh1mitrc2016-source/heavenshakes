@@ -66,6 +66,14 @@ export default {
         "warm-white": "hsl(var(--warm-white))",
         caramel: "hsl(var(--caramel))",
         mocha: "hsl(var(--mocha))",
+        diwali: {
+          gold: "hsl(var(--diwali-gold))",
+          orange: "hsl(var(--diwali-orange))",
+          "deep-red": "hsl(var(--diwali-deep-red))",
+          terracotta: "hsl(var(--diwali-terracotta))",
+          purple: "hsl(var(--diwali-purple))",
+          green: "hsl(var(--diwali-green))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

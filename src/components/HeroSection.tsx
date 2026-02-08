@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-shake.jpg";
+import { Diya, RangoliCorner } from "./DiwaliDecorations";
 
 const HeroSection = () => {
   return (
@@ -16,10 +17,52 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
+        {/* Diwali golden overlay */}
+        <div
+          className="absolute inset-0 mix-blend-overlay opacity-20"
+          style={{
+            background: "radial-gradient(ellipse at center, hsl(var(--diwali-gold) / 0.3), transparent 70%)",
+          }}
+        />
       </div>
+
+      {/* Rangoli corners */}
+      <RangoliCorner position="top-left" />
+      <RangoliCorner position="top-right" />
+      <RangoliCorner position="bottom-left" />
+      <RangoliCorner position="bottom-right" />
+
+      {/* Diyas at the bottom */}
+      <Diya delay={0.5} x="5%" bottom="40px" />
+      <Diya delay={0.8} x="20%" bottom="30px" />
+      <Diya delay={1.1} x="75%" bottom="35px" />
+      <Diya delay={1.4} x="92%" bottom="45px" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
+        {/* Diwali special badge */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-diwali-gold/20 text-diwali-gold text-sm font-body font-semibold mb-4 backdrop-blur-sm border border-diwali-gold/30">
+            <motion.span
+              animate={{ rotate: [0, 15, -15, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              🪔
+            </motion.span>
+            Diwali Special Offers
+            <motion.span
+              animate={{ rotate: [0, -15, 15, 0] }}
+              transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+            >
+              🪔
+            </motion.span>
+          </span>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -45,9 +88,19 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="font-body text-lg sm:text-xl md:text-2xl text-cream/90 mb-10 max-w-2xl mx-auto"
+          className="font-body text-lg sm:text-xl md:text-2xl text-cream/90 mb-4 max-w-2xl mx-auto"
         >
           Taste the Heaven in Every Sip ☕🍫
+        </motion.p>
+
+        {/* Diwali tagline */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="font-display text-base sm:text-lg text-diwali-gold/90 mb-10"
+        >
+          ✨ Is Diwali, meetha ho jaaye! ✨
         </motion.p>
 
         <motion.div
