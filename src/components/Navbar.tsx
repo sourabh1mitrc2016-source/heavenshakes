@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
-import { Phone, Menu, X, MapPin } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/heaven-shakes-logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -16,8 +14,6 @@ const navLinks = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -27,10 +23,6 @@ const Navbar = () => {
 
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
-    if (!isHomePage) {
-      window.location.href = "/" + href;
-      return;
-    }
     const el = document.querySelector(href);
     el?.scrollIntoView({ behavior: "smooth" });
   };
@@ -47,9 +39,9 @@ const Navbar = () => {
         {/* Logo */}
         <button
           onClick={() => handleNavClick("#home")}
-          className="flex items-center gap-2"
+          className="font-display text-2xl sm:text-3xl font-bold text-primary tracking-tight"
         >
-          <img src={logo} alt="Heaven Shakes logo" className="h-10 sm:h-12 w-auto" />
+          Heaven<span className="gradient-text"> Shakes</span>
         </button>
 
         {/* Desktop Nav */}
@@ -63,13 +55,6 @@ const Navbar = () => {
               {link.label}
             </button>
           ))}
-          <Link
-            to="/stores"
-            className="inline-flex items-center gap-1.5 font-body text-sm font-medium text-caramel hover:text-primary transition-colors duration-200"
-          >
-            <MapPin size={15} />
-            Stores
-          </Link>
           <a
             href="tel:9828820550"
             className="call-btn text-sm"
@@ -108,14 +93,6 @@ const Navbar = () => {
                   {link.label}
                 </button>
               ))}
-              <Link
-                to="/stores"
-                onClick={() => setMobileOpen(false)}
-                className="inline-flex items-center gap-2 font-body text-base font-medium text-caramel hover:text-primary transition-colors py-2"
-              >
-                <MapPin size={16} />
-                Store Locator
-              </Link>
               <a href="tel:9828820550" className="call-btn text-sm w-fit">
                 <Phone size={16} />
                 Call Now
