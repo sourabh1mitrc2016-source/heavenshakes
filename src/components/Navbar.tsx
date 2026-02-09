@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Phone, Menu, X, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/heaven-shakes-logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -46,9 +47,9 @@ const Navbar = () => {
         {/* Logo */}
         <button
           onClick={() => handleNavClick("#home")}
-          className="font-display text-2xl sm:text-3xl font-bold text-primary tracking-tight"
+          className="flex items-center gap-2"
         >
-          Heaven<span className="gradient-text"> Shakes</span>
+          <img src={logo} alt="Heaven Shakes logo" className="h-10 sm:h-12 w-auto" />
         </button>
 
         {/* Desktop Nav */}
