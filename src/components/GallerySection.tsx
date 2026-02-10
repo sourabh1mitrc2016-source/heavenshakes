@@ -1,22 +1,14 @@
 import { motion } from "framer-motion";
-import shakeChocolate from "@/assets/shake-chocolate.jpg";
-import shakeOreo from "@/assets/shake-oreo.jpg";
-import shakeStrawberry from "@/assets/shake-strawberry.jpg";
-import shakeMango from "@/assets/shake-mango.jpg";
-import coldCoffee from "@/assets/cold-coffee.jpg";
-import cafeInterior from "@/assets/cafe-interior.jpg";
-import galleryFlatlay from "@/assets/gallery-flatlay.jpg";
-import shakeButterscotch from "@/assets/shake-butterscotch.jpg";
+import storeFront from "@/assets/store-front.jpg";
+import storeShake from "@/assets/store-shake.jpg";
+import storeInterior from "@/assets/store-interior.jpg";
+import storeOutdoor from "@/assets/store-outdoor.jpg";
 
 const images = [
-  { src: galleryFlatlay, alt: "Colorful shakes collection", span: "col-span-2 row-span-2" },
-  { src: shakeChocolate, alt: "Chocolate shake", span: "" },
-  { src: cafeInterior, alt: "Cafe interior", span: "" },
-  { src: shakeStrawberry, alt: "Strawberry shake", span: "" },
-  { src: coldCoffee, alt: "Cold coffee", span: "" },
-  { src: shakeOreo, alt: "Oreo shake", span: "col-span-2" },
-  { src: shakeMango, alt: "Mango shake", span: "" },
-  { src: shakeButterscotch, alt: "Butterscotch shake", span: "" },
+  { src: storeFront, alt: "Heaven Shakes store front", span: "col-span-2 row-span-2" },
+  { src: storeShake, alt: "Heaven Shakes branded shake", span: "" },
+  { src: storeInterior, alt: "Cafe interior with honeycomb decor", span: "" },
+  { src: storeOutdoor, alt: "Outdoor seating area", span: "col-span-2" },
 ];
 
 const GallerySection = () => {
