@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/heaven-shakes-logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -31,17 +32,23 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-md py-3"
-          : "bg-transparent py-5"
-      }`}
+          ? "bg-white/98 backdrop-blur-md py-[15px]"
+          : "bg-white/95 py-[15px]"
+      } shadow-[0_2px_16px_0_rgba(0,0,0,0.10)]`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <button
           onClick={() => handleNavClick("#home")}
-          className="font-display text-2xl sm:text-3xl font-bold text-primary tracking-tight"
+          className="flex-shrink-0"
+          aria-label="Go to top"
         >
-          Heaven<span className="gradient-text"> Shakes</span>
+          <img
+            src={logo}
+            alt="The Heaven's Shakes - Premium Juice & Shakes Cafe Since 1984"
+            className="w-[120px] sm:w-[160px] h-auto drop-shadow-md"
+            loading="lazy"
+          />
         </button>
 
         {/* Desktop Nav */}
