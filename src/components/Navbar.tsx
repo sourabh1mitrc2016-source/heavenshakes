@@ -37,19 +37,15 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo */}
+        {/* Brand Text */}
         <button
           onClick={() => handleNavClick("#home")}
           className="flex items-center flex-shrink-0"
           aria-label="Go to top"
         >
-          <img
-            src={logo}
-            alt="The Heaven's Shakes - Premium Juice & Shakes Cafe Since 1984"
-            className="w-[100px] sm:w-[130px] h-auto object-contain"
-            loading="eager"
-            style={{ imageRendering: "crisp-edges" }}
-          />
+          <span className={`font-display text-xl sm:text-2xl font-medium tracking-widest transition-colors duration-300 ${scrolled ? "text-primary" : "text-white"}`}>
+            Heaven <span className="italic font-bold">Shakes</span>
+          </span>
         </button>
 
         {/* Desktop Nav */}
