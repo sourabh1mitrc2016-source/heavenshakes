@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-shake.jpg";
+import logo from "@/assets/heaven-shakes-logo.png";
 
 const HeroSection = () => {
   return (
@@ -20,10 +21,26 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
+
+        {/* Centered Logo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex justify-center mb-6"
+        >
+          <img
+            src={logo}
+            alt="The Heaven's Shakes - Premium Juice & Shakes Cafe Since 1984"
+            className="w-[130px] sm:w-[160px] md:w-[180px] h-auto object-contain drop-shadow-xl"
+            loading="eager"
+          />
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-caramel/20 text-pastel-peach text-sm font-body font-medium mb-6 backdrop-blur-sm border border-caramel/20">
             📍 Ghanta Ghar, India
