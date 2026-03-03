@@ -32,22 +32,23 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/98 backdrop-blur-md py-[15px]"
-          : "bg-white/95 py-[15px]"
-      } shadow-[0_2px_16px_0_rgba(0,0,0,0.10)]`}
+          ? "bg-white/80 backdrop-blur-md shadow-[0_2px_20px_0_rgba(0,0,0,0.08)] py-2"
+          : "bg-transparent py-3"
+      }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <button
           onClick={() => handleNavClick("#home")}
-          className="flex-shrink-0"
+          className="flex items-center flex-shrink-0"
           aria-label="Go to top"
         >
           <img
             src={logo}
             alt="The Heaven's Shakes - Premium Juice & Shakes Cafe Since 1984"
-            className="w-[120px] sm:w-[160px] h-auto drop-shadow-md"
-            loading="lazy"
+            className="w-[100px] sm:w-[130px] h-auto object-contain"
+            loading="eager"
+            style={{ imageRendering: "crisp-edges" }}
           />
         </button>
 
