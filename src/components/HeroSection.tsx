@@ -56,8 +56,8 @@ const HeroSection = () => {
               alt="The Heaven's Shakes - Premium Juice & Shakes Cafe Since 1984"
               className="relative w-[220px] sm:w-[270px] md:w-[310px] h-auto object-contain"
               style={{
-                filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.55)) drop-shadow(0 2px 8px rgba(0,0,0,0.35))",
-                mixBlendMode: "normal",
+                filter: "drop-shadow(0 4px 24px rgba(0,0,0,0.6)) drop-shadow(0 2px 8px rgba(0,0,0,0.4))",
+                mixBlendMode: "multiply",
               }}
               loading="eager"
             />
