@@ -22,21 +22,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
 
-        {/* Centered Logo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.85 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex justify-center mb-6"
-        >
-          <img
-            src={logo}
-            alt="The Heaven's Shakes - Premium Juice & Shakes Cafe Since 1984"
-            className="w-[130px] sm:w-[160px] md:w-[180px] h-auto object-contain drop-shadow-xl"
-            loading="eager"
-          />
-        </motion.div>
-
+        {/* Location Tag */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,16 +33,24 @@ const HeroSection = () => {
           </span>
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+        {/* Centered Logo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-          className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-warm-white leading-tight mb-6"
+          className="flex justify-center mb-6"
         >
-          Heaven
-          <br />
-          <span className="italic text-pastel-peach">Shakes</span>
-        </motion.h1>
+          <div className="relative">
+            {/* Soft glow behind logo */}
+            <div className="absolute inset-0 rounded-full bg-black/30 blur-2xl scale-110" />
+            <img
+              src={logo}
+              alt="The Heaven's Shakes - Premium Juice & Shakes Cafe Since 1984"
+              className="relative w-[150px] sm:w-[185px] md:w-[210px] h-auto object-contain drop-shadow-2xl"
+              loading="eager"
+            />
+          </div>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
