@@ -37,16 +37,28 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-          className="flex justify-center mb-6"
+          transition={{ duration: 0.9, delay: 0.15, ease: "easeOut" }}
+          className="flex justify-center mb-8"
         >
-          <div className="relative">
-            {/* Soft glow behind logo */}
-            <div className="absolute inset-0 rounded-full bg-black/30 blur-2xl scale-110" />
+          <div className="relative flex items-center justify-center">
+            {/* Radial glow ring behind logo */}
+            <div
+              className="absolute rounded-full"
+              style={{
+                width: "110%",
+                height: "110%",
+                background: "radial-gradient(circle, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 55%, transparent 75%)",
+                filter: "blur(18px)",
+              }}
+            />
             <img
               src={logo}
               alt="The Heaven's Shakes - Premium Juice & Shakes Cafe Since 1984"
-              className="relative w-[150px] sm:w-[185px] md:w-[210px] h-auto object-contain drop-shadow-2xl"
+              className="relative w-[220px] sm:w-[270px] md:w-[310px] h-auto object-contain"
+              style={{
+                filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.55)) drop-shadow(0 2px 8px rgba(0,0,0,0.35))",
+                mixBlendMode: "normal",
+              }}
               loading="eager"
             />
           </div>
